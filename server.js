@@ -12,7 +12,7 @@ require('./config/database');
 
 var banksRouter = require('./routes/banks');
 var usersRouter = require('./routes/users');
-// var groceriesRouter = require('./routes/groceries')
+var groceriesRouter = require('./routes/groceries')
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', banksRouter);
 app.use('/users', usersRouter);
-// app.use('/groeries', groceriesRouter)
+app.use('/groeries', groceriesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/groceries" method="POST">
+  <label>Item:</label>
+  <input type="text" name="item">
+  <label>Category:</label>
+  <select name="category">
+    <option value="Produce">Produce</option>
+    <option value="Meat">Meat</option>
+    <option value="Grocery">Grocery</option>
+    <option value="Dairy">Dairy</option>
+    <option value="Frozen">Frozen</option>
+  </select>
+  <label>Estimation:</label>
+  <input type="number" name="estimation">
+  <input type="submit" value="Add Item">
+</form>
+
+<%- include('../partials/footer') %>
