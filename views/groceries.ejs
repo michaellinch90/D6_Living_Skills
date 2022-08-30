@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <title>D6 Living</title>
-</head>
+<%- include('./partials/header')%>
 <body>
 <main>
-    <h1>D6 living</h1>
-    <h2>Grocery List</h2>
         <form id="new-form" action="/groceries" method="POST">
           <label>Item:</label>
           <input type="text" name="item">
@@ -25,7 +15,24 @@
           <label>Estimation:</label>
           <input type="number" name="money">
           <input type="submit" value="Add Item">
-        </form> 
+        </form>
+        <table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Estimation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% groceries.forEach(function(g){ %>
+            <td><%= g.item %></td>
+            <td><%= g.category %></td>
+            <td><%= g.money %></td>
+        <% }); %>
+    </tbody>
+</table> 
+<a href="/lists/new">add new item</a>
 </main>
 </body>
 </html>

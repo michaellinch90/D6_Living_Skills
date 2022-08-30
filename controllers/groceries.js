@@ -1,17 +1,27 @@
   const Grocery = require ('../models/grocery');
 
-  function create (req, res) {
-    Grocery.create(req.body);
-	console.log(req.body);
-	res.redirect('groceries');
-  }
+  function create (req, res) { //adding activity from form
+    const grocery = new Grocery (req.body);
+    grocery.save(function(err){
+        if (err) return res.render('/');
+        res.redirect('/groceries')
+    })
+}
   
-  function newItem(req, res) {
-    res.render('./groceries');
+  function index(req, res) {
+    Grocery.findById(req.params.id, function (err, groceries) {
+        // if (err) return res.redirect('/');
+        res.render('./groceries', { groceries })
+      })
+  }
+
+  function newItem(req,res) {
+    res.render('./groceries')
   }
 
   module.exports = {
     create,
-    new : newItem
+    index,
+    new :newItem
   };
   
