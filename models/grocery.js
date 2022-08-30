@@ -8,3 +8,5 @@ const groceriesSchema = new Schema ({
     category : String,
     money : Number
 });
+
+module.exports = mongoose.model('Groccery', groceriesSchema);

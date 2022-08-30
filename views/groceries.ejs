@@ -1,19 +1,32 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <title>D6 Living</title>
+</head>
+<body>
+<main>
+    <h1>D6 living</h1>
+    <h2>Grocery List</h2>
+        <form id="new-form" action="/groceries" method="POST">
+          <label>Item:</label>
+          <input type="text" name="item">
+          <label>Category:</label>
+          <select name="category">
+            <option value="Produce">Produce</option>
+            <option value="Meat">Meat</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Frozen">Frozen</option>
+          </select>
+          <label>Estimation:</label>
+          <input type="number" name="money">
+          <input type="submit" value="Add Item">
+        </form> 
+</main>
+</body>
+</html>
 
-<form id="new-form" action="/groceries" method="POST">
-  <label>Item:</label>
-  <input type="text" name="item">
-  <label>Category:</label>
-  <select name="category">
-    <option value="Produce">Produce</option>
-    <option value="Meat">Meat</option>
-    <option value="Grocery">Grocery</option>
-    <option value="Dairy">Dairy</option>
-    <option value="Frozen">Frozen</option>
-  </select>
-  <label>Estimation:</label>
-  <input type="number" name="estimation">
-  <input type="submit" value="Add Item">
-</form>
-
-<%- include('../partials/footer') %>
