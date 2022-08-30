@@ -9,4 +9,4 @@ const groceriesSchema = new Schema ({
     money : Number
 });
 
-module.exports = mongoose.model('Groccery', groceriesSchema);
+module.exports = mongoose.model('Grocery', groceriesSchema);

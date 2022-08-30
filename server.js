@@ -10,7 +10,7 @@ require('./config/database');
 
 
 
-var banksRouter = require('./routes/banks');
+var banksRouter = require('./routes');
 var usersRouter = require('./routes/users');
 var groceriesRouter = require('./routes/groceries')
 
