@@ -22,13 +22,23 @@
                   <th>Item</th>
                   <th>Category</th>
                   <th>Estimation</th>
+                  <th>Do we have this?</th>
               </tr>
           </thead>
           <tbody>
+              <% let total = 0 %>
               <% groceries.forEach(function(g){ %>
+                <% total += g.money %>
+                <tr>
                   <td><%= g.item %></td>
                   <td><%= g.category %></td>
                   <td><%= g.money %></td>
+                  <td>
+                    <form action="/groceries?_method=DELETE" method="POST">
+                      <input id="delete-ticket" type="submit" name="" value="Yes">
+                    </form>
+                  </td>
+                </tr>
               <% }); %>
           </tbody>
       </table>

@@ -39,7 +39,7 @@ body > main {
   overflow-y: scroll;
 }
 
-body > main h1:first-child {
+/* body > main h1:first-child {
   margin-bottom: 50px;
 }
 
@@ -48,9 +48,9 @@ nav > a {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-}
+} */
 
-nav > a:hover:not(.active) {
+/* nav > a:hover:not(.active) {
   color: white;
   background-color: #424748;
 }
@@ -58,7 +58,7 @@ nav > a:hover:not(.active) {
 nav > a.active {
   color: white;
   cursor: default;
-}
+} */
 
 #new-form {
   display: grid;
@@ -94,7 +94,7 @@ table td {
   text-align: center;
 }
 
-#list td:nth-child(2), #list td:nth-child(3){
+/* #list td:nth-child(2), #list td:nth-child(3){
   min-width: 100px;
 }
 
@@ -108,9 +108,9 @@ table td {
 
 #list a:hover {
   background-color: white;
-}
+} */
 
-#show-page {
+/* #show-page {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
@@ -126,9 +126,9 @@ table td {
   grid-template-columns: auto auto;
   grid-gap: 1rem;
   margin-bottom: 2rem;
-}
+} */
 
-#add-review-form input[type="submit"],
+/* #add-review-form input[type="submit"],
 #add-performer-form input[type="submit"]  {
   width: 10rem;
   grid-column: 2 / 3;
@@ -149,9 +149,9 @@ li {
   justify-content: center;
   align-items: center;
   height: 34px;
-}
+} */
 
-.login img {
+/* .login img {
   height: 30px;
 }
 
@@ -164,4 +164,4 @@ li {
 .review-user img {
   border-radius: 50%;
   height: 40px;
-}
+} */
