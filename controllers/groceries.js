@@ -9,9 +9,11 @@
 }
   
   function index(req, res) {
-    Grocery.findById(req.params.id, function (err, groceries) {
+    Grocery.find({}, function (err, groceries) {
         // if (err) return res.redirect('/');
+        console.log(groceries)
         res.render('./groceries', { groceries })
+        
       })
   }
 

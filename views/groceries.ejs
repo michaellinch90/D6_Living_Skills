@@ -16,6 +16,22 @@
           <input type="number" name="money">
           <input type="submit" value="Add Item">
         </form>
+        <table>
+          <thead>
+              <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Estimation</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% groceries.forEach(function(g){ %>
+                  <td><%= g.item %></td>
+                  <td><%= g.category %></td>
+                  <td><%= g.money %></td>
+              <% }); %>
+          </tbody>
+      </table>
 </main>
 </body>
 </html>
