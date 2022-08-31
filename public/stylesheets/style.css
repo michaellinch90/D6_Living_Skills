@@ -1,10 +1,10 @@
-* {
+*{
   box-sizing: border-box;
   font-family: Helvetica;
   color: #424748;
 }
 
-body {
+ /* body {
   margin: 0;
   height: 100vh;
   display: grid;
@@ -12,7 +12,7 @@ body {
   grid-template-areas: 
     "nav"
     "main"
-}
+} */
 
 body > nav {
   grid-area: nav;
@@ -37,7 +37,7 @@ body > main {
   background-color: #E8ECEB;
   padding: 20px;
   overflow-y: scroll;
-}
+} */
 
 /* body > main h1:first-child {
   margin-bottom: 50px;
@@ -142,20 +142,19 @@ ul {
 	
 li {
   font-weight: bold;
-}
-
+}*/
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 34px;
-} */
+} 
 
-/* .login img {
+.login img {
   height: 30px;
 }
 
-.review-user {
+/* .review-user {
   display: flex;
   justify-content: center;
   align-items: center;
