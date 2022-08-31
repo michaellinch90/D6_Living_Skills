@@ -12,6 +12,6 @@ router.get('/', groceriesCtrl.new) // viewing form for add new activity
 
 router.post('/', groceriesCtrl.create) //CREATE: add new activity
 
-router.delete('/', groceriesCtrl.delete) //DELETE and refresh grocery list
+router.delete('/:id', groceriesCtrl.delete) //DELETE and refresh grocery list
 
 module.exports = router ;
