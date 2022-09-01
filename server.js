@@ -17,6 +17,7 @@ require('./config/passport');
 var banksRouter = require('./routes');
 var usersRouter = require('./routes/users');
 var groceriesRouter = require('./routes/groceries')
+var editRouter = require('./routes/edits');
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', banksRouter);
 app.use('/users', usersRouter);
+app.use('/:id/editGroceries', editRouter)
 
 app.use(function(req, res, next) {
   next();  // Pass the request to the next middleware

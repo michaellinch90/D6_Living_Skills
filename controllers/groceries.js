@@ -38,7 +38,7 @@ function editGrocery (req, res) {
     // })
     Grocery.findOne({_id: req.params.id}, function(err, grocery){
         if (err || !grocery) return res.redirect('/groceries');
-        res.render('groceries/editGoceries', {title: "Edit grocery", grocery});
+        res.render('/editGoceries', {title: "Edit grocery", grocery});
     });
 ///:id/update
 }
