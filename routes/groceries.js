@@ -16,6 +16,6 @@ router.delete('/:id', groceriesCtrl.delete) //DELETE and refresh grocery list
 
 // router.get('/:id/editGroceries', groceriesCtrl.editGrocery)//link to edit page
 
-// router.put('/:id', groceriesCtrl.update)// Update grocery
+// router.put('/', groceriesCtrl.update)// Update grocery
 
 module.exports = router ;
