@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', banksRouter);
 app.use('/users', usersRouter);
-app.use('/:id/editGroceries', editRouter)
+app.use('/', editRouter)
 
 app.use(function(req, res, next) {
   next();  // Pass the request to the next middleware

@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const groceriesCtrl = require('../controllers/groceries');
+const editCTRL = require('../controllers/groceries');
 
-router.get('/editGroceries', groceriesCtrl.editGrocery)//link to edit page
+router.get('/:id/editGroceries', editCTRL.editGrocery)//link to edit page
 
-router.put('/groceries', groceriesCtrl.update)// Update grocery
+router.put('/groceries', editCTRL.update)// Update grocery
 
 module.exports = router ;

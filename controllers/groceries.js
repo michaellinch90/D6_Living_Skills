@@ -38,7 +38,8 @@ function editGrocery (req, res) {
     // })
     Grocery.findOne({_id: req.params.id}, function(err, grocery){
         if (err || !grocery) return res.redirect('/groceries');
-        res.render('/editGoceries', {title: "Edit grocery", grocery});
+        //takes you to views/editGroceris
+        res.render('./editGroceries', {title: "Edit grocery", grocery});
     });
 ///:id/update
 }
@@ -52,7 +53,7 @@ function update(req, res) {
       {new: true},
       function(err, grocery) {
         if (err || !grocery) return res.redirect('/groceries');
-        res.redirect(`/groceries/${grocery._id}`);
+        res.redirect(`/groceries`);
       }
     );
   }
