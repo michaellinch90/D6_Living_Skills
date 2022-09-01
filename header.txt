@@ -126,3 +126,14 @@
     -----
     
     <a href="/">Home</a> <a href="/groceries">Grocery List</a>
+
+    ------
+
+        <% if (user && user._id.equals(g.user)) { %>
+                    <form action="/groceries/<%= grocery.id %>/editGrocries" method="GET">
+                        <button type="submit">Edit</button>
+                    </form>   
+                    <% } %>
+                </td>
+                </tr>
+              <% }); %>

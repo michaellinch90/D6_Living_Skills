@@ -40,6 +40,11 @@
                       <input id="delete-ticket" type="submit" name="" value="Yes">
                     </form>
                   </td>
+                  <td>
+                    <form action="/groceries/<%= g.id %>/editGrocries" method="GET">
+                      <button type="submit">Edit</button>
+                  </form>
+                  </td>
                 </tr>
               <% }); %>
           </tbody>
