@@ -18,7 +18,7 @@ passport.use(
                         googleId: profile.id,
                         email: profile.emails[0].value,
                         avatar: profile.photos[0].value,
-                    }); console.log('thissssss issssss email', user)
+                    }); 
                     return cb(null, user);
                 } catch (err) {
                     return cb(err);

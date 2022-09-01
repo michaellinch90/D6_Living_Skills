@@ -1,6 +1,6 @@
   const Grocery = require ('../models/grocery');
 
-  function create (req, res) { //adding activity from form
+  function create (req, res) { //adding grocery from form
     const grocery = new Grocery (req.body);
     grocery.save(function(err){
         if (err) return res.render('/');
@@ -20,24 +20,50 @@
     res.render('./groceries')
   }
 
-  // Include the next parameter - used for error handling in the catch
+
 function deleteGrocery(req, res, next) {
-    // Note the cool "dot" syntax to query on the property of a subdoc
    Grocery.findOneAndDelete({id:req.params.id}, function (err, grocery) {
     if (err){
-        console.log(err)
+        
     }
     else{
-        console.log("Deleted : ", grocery);
         res.redirect(`/groceries`)
     }
 });
+}
+
+function editGrocery (req, res) {
+    // res.render('groceries/editgroceries', {
+    //     grocery: grocery.findByIdAndUpdate(req.params.id)
+    // })
+    Grocery.findOne({_id: req.params.id}, function(err, grocery){
+        if (err || !grocery) return res.redirect('/groceries');
+        res.render('groceries/editGoceries', {title: "Edit grocery", grocery});
+    });
+///:id/update
+}
+
+function update(req, res) {
+    grocery.findOneAndUpdate(
+      {_id: req.params.id, userRecommending: req.user._id},
+      // update object with updated properties
+      req.body,
+      // options object with new: true to make sure updated doc is returned
+      {new: true},
+      function(err, grocery) {
+        if (err || !grocery) return res.redirect('/groceries');
+        res.redirect(`/groceries/${grocery._id}`);
+      }
+    );
   }
-//   
+
+
   module.exports = {
     create,
     index,
     new :newItem,
-    delete : deleteGrocery
+    delete : deleteGrocery,
+    update,
+    editGrocery
   };
   

@@ -48,7 +48,6 @@ app.use('/', banksRouter);
 app.use('/users', usersRouter);
 
 app.use(function(req, res, next) {
-  console.log('Hello SEI!');
   next();  // Pass the request to the next middleware
 });
 app.use('/groceries', groceriesRouter)
