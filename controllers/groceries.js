@@ -1,6 +1,8 @@
   const Grocery = require ('../models/grocery');
+const { rawListeners } = require('../models/user');
 
   function create (req, res) { //adding grocery from form
+    req.body.userId = req.user.googleId
     const grocery = new Grocery (req.body);
     grocery.save(function(err){
         if (err) return res.render('/');
@@ -22,14 +24,15 @@
 
 
 function deleteGrocery(req, res, next) {
-   Grocery.findOneAndDelete({id:req.params.id}, function (err, grocery) {
-    if (err){
-        
-    }
-    else{
-        res.redirect(`/groceries`)
-    }
-});
+    //find grocery item
+    Grocery.findOne({id : req.params.id}).then(grocery => {
+        if (grocery.userId === req.user.googleId) {
+            Grocery.deleteOne({id : req.params.id}).then(deletedGrocery => {
+                console.log(deletedGrocery)
+                res.redirect(`/groceries`)
+            })
+        }
+    })
 }
 
 // function editGrocery (req, res) {

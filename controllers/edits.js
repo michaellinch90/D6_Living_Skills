@@ -8,16 +8,20 @@ function editGrocery (req, res) {
     });
 }
 
-function update(req, res) {
-    Grocery.findOneAndUpdate(
-      {_id: req.params.id},req.body,{new: true},
-      function(err, grocery) {
-        if (err || !grocery) return res.redirect(`/`);
-        res.redirect(`/groceries`);
-      }
-    );
-  }
+function update(req, res, next) {
+    //find grocery item
+    Grocery.findOne({id : req.params.id}).then(grocery => {
+        if (grocery.userId === req.user.googleId) {
+            Grocery.updateOne({id : req.params.id}, req.body).then(updatedGrocery => {
+                console.log(updatedGrocery)
+                res.redirect(`/groceries`)
+            })
+        }
+    })
+}
 
+
+  
   module.exports = {
     update,
     editGrocery

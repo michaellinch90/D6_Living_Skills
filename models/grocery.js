@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const groceriesSchema = new Schema ({
     item : String,
     category : String,
-    money : Number
+    money : Number,
+    userId : String,
 });
 
 module.exports = mongoose.model('Grocery', groceriesSchema);

@@ -36,9 +36,11 @@
                   <td><%= g.category %></td>
                   <td><%= g.money %></td>
                   <td>
+                    <% if (user) { %>
                     <form action="/groceries/<%= g._id %>?_method=DELETE" method="POST">
                       <input id="delete-ticket" type="submit" name="" value="Yes">
                     </form>
+                    <% } %>
                   </td>
                   <td>
                     <form action="/<%= g.id %>/editGroceries" method="GET">
