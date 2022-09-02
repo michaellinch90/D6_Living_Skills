@@ -137,3 +137,22 @@
                 </td>
                 </tr>
               <% }); %>
+
+-------
+<%- include('./partials/header')%>
+<h1>Edit Grocery</h1>
+<form action="/groceries/?_method=PUT" method=“POST”>
+    <label>Item:</label>
+          <input type="text" name="item">
+          <label>Category:</label>
+          <select name="category">
+            <option value="Produce">Produce</option>
+            <option value="Meat">Meat</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Frozen">Frozen</option>
+          </select>
+          <label>Estimation:</label>
+          <input type="number" name="money">
+          <input type="submit" value="Add Item">
+</form>

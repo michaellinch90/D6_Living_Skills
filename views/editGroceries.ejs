@@ -1,6 +1,6 @@
 <%- include('./partials/header')%>
 <h1>Edit Grocery</h1>
-<form action="/groceries/?_method=PUT" method=“POST”>
+<form action="/<%= grocery._id %>/updateGroceries?_method=PUT" method="POST">
     <label>Item:</label>
           <input type="text" name="item">
           <label>Category:</label>
