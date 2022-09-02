@@ -6,31 +6,31 @@ Aimed to be used as a tool for teen to adult special education, this grocery lis
 
 The user will need to log in using a google account to view the grocery list
 
-![Home Page](/screenshots/home.png)
+![Home Page](/public/images/home.png)
 
 The user will click on grocery list 
 
-![Logged In](/screenshots/index.png)
+![Logged In](/public/images/index.png)
 
 The grocery list will populate with any items stored in the Database
 
-![Grocery List](/screenshots/list.png)
+![Grocery List](/public/images/list.png)
 
 If user selects edit they will be taked to another page to edit the item
 
-![Edit Screen](/screenshots/edit.png)
+![Edit Screen](/public/images/edit.png)
 
 After submitting the edit the user will be redirected back to the grocery list, showing the edit
 
-![Updated Item](/screenshots/update.png)
+![Updated Item](/public/images/update.png)
 
 If user selects that "yes" we have an item it will be deleted
 
-![Deleted Item](/screenshots/deleted.png)
+![Deleted Item](/public/images/deleted.png)
 
 If user clicks log out the will be logged out and redirected back to the home page unable to edit or delete items
 
-![Logged Out](/screenshots/home.png)
+![Logged Out](/public/images/home.png)
 
 
 
@@ -72,7 +72,7 @@ Completing the assignment. This was a challenge to say the least and to have a w
 - Bill pay section
 - Pay other users
 
-![D6 Living](/screenshots/D6.png)
+![D6 Living](/public/images/D6.png)
 
 
 #### [Get Started Now](https://d6-project.herokuapp.com/)
